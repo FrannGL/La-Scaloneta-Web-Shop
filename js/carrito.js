@@ -58,6 +58,7 @@ function cargarProductosCarrito() {
 
     actualizarBotonesEliminar();
     actualizarTotal();
+    actualizarNumerito();
 }
 
 cargarProductosCarrito();
@@ -102,5 +103,14 @@ function comprarCarrito() {
     contenedorCarritoVacio.classList.add("disabled");
     contenedorCarritoProductos.classList.add("disabled");
     contenedorCarritoAcciones.classList.add("disabled");
-    contenedorCarritoComprado.classList.remove("disabled");      
+    contenedorCarritoComprado.classList.remove("disabled");  
+    
+    actualizarNumerito();
+}
+
+// FUNCION ACTUALIZAR NUMERO DE CARRITO
+
+function actualizarNumerito() {
+    let nuevoNumero = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+    numerito.innerText = nuevoNumero;
 }

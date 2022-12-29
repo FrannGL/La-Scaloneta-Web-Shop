@@ -71,27 +71,30 @@
 }
 
 .form__container {
+    margin-top: 60px;
     height: 450px;
     .form__item {
-        width: 45vw;
+        width: 75vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 50px;
         form {
-            margin-left: 25px;
+            width: 70vw;
             display: flex;
             justify-content: center;
             flex-direction: column;
             border: 2px solid black;
+            border-radius: 1.5rem;
         }
         h1 {
             text-align: center;
-            margin: 50px 50px;
+            margin-top: 50px;
         }
         .input {
             margin-left: 15px;
-            width: 85%;
+            width: 96%;
             outline: none;
             background: none;
             border: none;
@@ -106,8 +109,10 @@
             border: none;
         }
         button {
-            width: 82%;
-            margin: 20px;
+            width: 35%;
+            margin: 0 auto;
+            margin-top: 5px;
+            margin-bottom: 25px;
             padding: 15px;
         }
     }
@@ -166,7 +171,7 @@
 }
 
 .carrito-producto-imagen {
-    width: 8rem;
+    width: 6rem;
     border-radius: 1rem;
 }
 
@@ -287,6 +292,10 @@
     .agregarProducto:hover {
     background-color: #00465d;
     color: #fff;
+}
+
+.footer-section {
+    margin-top: 1000px;
 }
 
 
