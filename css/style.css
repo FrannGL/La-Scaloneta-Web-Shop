@@ -13,6 +13,12 @@
   width: 100%;
   height: 100%; }
 
+.buscador {
+  cursor: pointer; }
+
+.ocultar {
+  display: none; }
+
 .main__info {
   width: 100%;
   height: 120px;

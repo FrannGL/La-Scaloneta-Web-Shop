@@ -49,7 +49,6 @@ const productos = [producto1, producto2, producto3, producto4, producto5, produc
 
 // DECLARACION DE VARIABLES
 
-let carrito = [];
 const coleccion = document.getElementById("coleccion");
 const botonCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
@@ -101,6 +100,19 @@ botonCategorias.forEach(boton => {
     })
 })
 
+const botonBusqueda = document.getElementById("buscador__icono");
+const buscador = document.getElementById("buscador__input");
+const resultadoBusqueda = document.getElementById("buscador__resultado")
+
+botonBusqueda.addEventListener("click", () => {
+    buscador.classList.toggle("ocultar");
+    buscador.addEventListener("keyup", (e) => {
+        let texto = e.target.value;
+        let busqueda = productos.filter(producto => texto === producto.nombre);
+        mostrarProductos(busqueda);
+    })
+});
+
 
 // FUNCION PARA ACTUALIZAR BOTONES AGREGAR
 
@@ -146,4 +158,6 @@ function actualizarNumerito() {
     let nuevoNumero = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumero;
 }
+
+
 

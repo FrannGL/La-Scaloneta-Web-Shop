@@ -19,6 +19,14 @@
     height: 100%;
 }
 
+.buscador{
+    cursor: pointer;
+}
+
+.ocultar {
+    display: none;
+}
+
 // ------------------------- CONTENIDO PRINCIPAL ------------------
 
 .main__info {
@@ -293,5 +301,3 @@
 .footer-section {
     margin-top: 1000px;
 }
-
-
