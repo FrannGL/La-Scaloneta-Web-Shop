@@ -8,8 +8,16 @@
     "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrannGL/La-Scaloneta-Web-Shop.git"
+  },
+  "author": "Franco Galluccio",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrannGL/La-Scaloneta-Web-Shop/issues"
+  },
+  "homepage": "https://github.com/FrannGL/La-Scaloneta-Web-Shop#readme",
   "devDependencies": {
     "node-sass": "^8.0.0",
     "nodemon": "^2.0.20"
