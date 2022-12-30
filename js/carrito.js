@@ -1,3 +1,5 @@
+// DECLARACION DE VARIABLES Y LLAMADO DE PRODUCTOS DESDE EL LOCALSTORAGE
+
 let productosEnCarrito = (localStorage.getItem("productos-en-carrito"));
 productosEnCarrito = JSON.parse(productosEnCarrito);
 
@@ -9,6 +11,8 @@ let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
 const botonVaciar = document.getElementById("carrito-acciones-vaciar");
 const botonComprar = document.getElementById("carrito-acciones-comprar");
 const contenedorTotal = document.getElementById("total");
+
+// FUNCION PARA TRAER EL ARRAY DE PRODUCTOS DESDE EL LOCALSTORAGE Y MOSTRARLOS EN EL DOM
 
 function cargarProductosCarrito() {
     {
@@ -24,7 +28,7 @@ function cargarProductosCarrito() {
             productosEnCarrito.forEach(producto => {
                 const div = document.createElement("div");
                 div.classList.add("carrito-producto");
-                div.innerHTML = `<img class="carrito-producto-imagen" src="./${producto.url}" alt="${producto.nombre}">
+                div.innerHTML = `<img class="carrito-producto-imagen" src="../${producto.url}" alt="${producto.nombre}">
                                 <div class="carrito-producto-titulo">
                                     <small>Titulo</small>
                                     <h3>${producto.nombre}</h3>
@@ -63,6 +67,8 @@ function cargarProductosCarrito() {
 
 cargarProductosCarrito();
 
+// FUNCION PARA ACTAULIZAR BOTONES DEL CARRITO
+
 function actualizarBotonesEliminar() {
     botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
     botonesEliminar.forEach(boton => {
@@ -70,6 +76,8 @@ function actualizarBotonesEliminar() {
     });
 };
 
+
+// FUNCION PARA ELIMINAR PRODUCTOS DEL CARRITO
 
 function eliminarDelCarrito(e) {
     const idBoton = e.currentTarget.id;
@@ -81,6 +89,8 @@ function eliminarDelCarrito(e) {
 }
 
 
+// FUNCION PARA VACIAR TODO EL CARRITO
+
 botonVaciar.addEventListener("click", vaciarCarrito);
 
 function vaciarCarrito() {
@@ -89,12 +99,18 @@ function vaciarCarrito() {
     cargarProductosCarrito();
 }
 
+
+// FUNCION PARA ACTUALIZAR EL TOTAL DE LA COMPRA
+
 function actualizarTotal() {
     const totalCalculado = productosEnCarrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
     contenedorTotal.innerText = `$ ${totalCalculado}`;
 }
 
 botonComprar.addEventListener("click", comprarCarrito);
+
+
+// FUNCION QUE SE EJECUTA AL HACER CLICK EN COMPRAR
 
 function comprarCarrito() {
     productosEnCarrito.length = 0;
