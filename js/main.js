@@ -100,6 +100,8 @@ botonCategorias.forEach(boton => {
     })
 })
 
+// FUNCION BUSCADOR DE PRODUCTOS
+
 const botonBusqueda = document.getElementById("buscador__icono");
 const buscador = document.getElementById("buscador__input");
 const resultadoBusqueda = document.getElementById("buscador__resultado")
@@ -108,7 +110,7 @@ botonBusqueda.addEventListener("click", () => {
     buscador.classList.toggle("ocultar");
     buscador.addEventListener("keyup", (e) => {
         let texto = e.target.value;
-        let busqueda = productos.filter(producto => texto === producto.nombre);
+        let busqueda = productos.filter(producto => producto.nombre === texto);
         mostrarProductos(busqueda);
     })
 });
@@ -119,7 +121,16 @@ botonBusqueda.addEventListener("click", () => {
 function actualizarBotonesAgregar() {
     agregarProducto = document.querySelectorAll(".agregarProducto");
     agregarProducto.forEach(boton => {
-        boton.addEventListener("click", agregarAlCarrito);
+        boton.addEventListener("click", agregarAlCarrito)
+        boton.addEventListener("click", () => {
+            Swal.fire({
+                title: "¡Todo Listo!",
+                text: "Producto agregado al carrito",
+                icon: "success",
+                confirmButtonText: "Aceptar",
+            });
+        });
+        
     })
 }
 
@@ -158,6 +169,5 @@ function actualizarNumerito() {
     let nuevoNumero = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumero;
 }
-
 
 

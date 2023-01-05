@@ -72,7 +72,20 @@ cargarProductosCarrito();
 function actualizarBotonesEliminar() {
     botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
     botonesEliminar.forEach(boton => {
-        boton.addEventListener("click", eliminarDelCarrito);
+        boton.addEventListener("click", () => {
+            Swal.fire ({
+                title: "¿Estás seguro de eliminar?",
+                icon: "warning",
+                confirmButtonText: "Aceptar",
+                showCancelButton: true,
+                cancelButtonText: "Cancelar",
+            }).then((result) => {
+                if(result.isConfirmed) {
+                    eliminarDelCarrito();
+                }
+            })
+        })
+        // boton.addEventListener("click", eliminarDelCarrito)
     });
 };
 
@@ -80,6 +93,7 @@ function actualizarBotonesEliminar() {
 // FUNCION PARA ELIMINAR PRODUCTOS DEL CARRITO
 
 function eliminarDelCarrito(e) {
+    botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === parseInt(idBoton));
     console.log(index);

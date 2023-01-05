@@ -42,6 +42,38 @@
 .text__colection {
   font-weight: bold; }
 
+.card-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
+.card {
+  width: 300px;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  border: 1px solid #868686; }
+
+.card img {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem; }
+
+.agregarProducto {
+  margin-right: 2rem;
+  border: 0;
+  background-color: #fff;
+  color: #00465d;
+  font-weight: bold;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid black; }
+
+.agregarProducto:hover {
+  background-color: #00465d;
+  color: #fff; }
+
 .btn-wp {
   width: 97%;
   height: 75px;
@@ -206,37 +238,6 @@
 .data-fiscal {
   width: 50px;
   margin-bottom: 20px; }
-
-.card-body {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center; }
-
-.card {
-  width: 300px;
-  border-radius: 2rem;
-  margin-top: 2rem; }
-
-.card img {
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem; }
-
-.agregarProducto {
-  margin-right: 2rem;
-  border: 0;
-  background-color: #fff;
-  color: #00465d;
-  font-weight: bold;
-  padding: 0.4rem;
-  border-radius: 1rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: 1px solid black; }
-
-.agregarProducto:hover {
-  background-color: #00465d;
-  color: #fff; }
 
 .footer-section {
   margin-top: 1000px; }
