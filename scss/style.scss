@@ -223,30 +223,27 @@
 
 .carrito-producto-cantidad {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         margin-top: 1rem;
         height: 1.3rem;
     }
     button {
-        height: 0.3rem;
-        margin-bottom: 0.2rem;
         border: 0;
-        background-color: #0088b6;
-        color: #fff;
-        padding: 0.6rem;
-        border-radius: 1rem;
-        cursor: pointer;
     }
 }
 
 .carrito-producto-operacion {
-    border: 1px solid black;
+    gap: 0.3rem;
     font-size: 0.8rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 

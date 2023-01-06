@@ -37,8 +37,10 @@ function cargarProductosCarrito() {
                                     <small>Cantidad</small>
                                     <div class="carrito-producto-cantidad">
                                         <p id="cantidad">${producto.cantidad}</p>
-                                        <button class="carrito-producto-operacion" id="sumarCantidad"><i class="fa-solid fa-plus"></i></button>
-                                        <button class="carrito-producto-operacion" id="restarCantidad"><i class="fa-solid fa-minus "></i></button>
+                                        <div class="carrito-producto-operacion">
+                                            <button id="sumarProducto"><i class="fa-solid fa-plus"></i></button>
+                                            <button id="restarProducto"><i class="fa-solid fa-minus "></i></button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="carrito-producto-precio">
@@ -143,7 +145,15 @@ function actualizarNumerito() {
     numerito.innerText = nuevoNumero;
 }
 
-const sumarProductosCarrito = document.querySelectorAll(".carrito-producto-sumar");
-sumarProductosCarrito.addEventListener("click", () => {
-    
-})
+
+// FUNCION SUMAR-RESTAR CANTIDADES DEL CARRITO
+
+const cantidad = document.getElementById("cantidad");
+
+const sumarCantidades = () => {
+    const botonSuma = document.getElementById("sumarProducto");
+    botonSuma.addEventListener("click", () => {
+        
+    })
+}
+sumarCantidades();
