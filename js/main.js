@@ -154,6 +154,7 @@ if (productosEnCarritoLS) {
     actualizarNumerito();
 } else {
     productosEnCarrito = [];
+    
 }
 
 function agregarAlCarrito(e) {
