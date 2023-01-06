@@ -13,33 +13,33 @@ class Productos {
 
 // DECLARACION DE PRODUCTOS
 
-const producto1 = new Productos (1, "Camiseta Titular", 12000, "./images/camiseta-titular.jpg", "Camisetas");
-const producto2 = new Productos (2, "Camiseta Suplente", 10000, "./images/camiseta-suplente.jpg", "Camisetas");
-const producto3 = new Productos (3, "Short Titular Blanco", 8000, "./images/shot-titular.jpg", "Pantalones");
-const producto4 = new Productos (4, "Short Titular Negro", 7000, "./images/short-titular2.png", "Pantalones")
-const producto5 = new Productos (5, "Short Suplente", 7000, "./images/short-suplente.jpg", "Pantalones");
-const producto6 = new Productos (6, "Camiseta Pre-Match (1)", 8500, "./images/camiseta-prepartido.jpg", "Camisetas");
-const producto7 = new Productos (7, "Camiseta Pre-Match (2)", 8000, "./images/camiseta-prepartido2.jpg", "Camisetas");
-const producto8 = new Productos (8, "Camiseta Pre-Match (3)", 8000, "./images/camiseta-prepartido3.jpg", "Camisetas");
-const producto9 = new Productos (9, "Botines X Leyenda", 75000, "./images/accesorios-botines1.jpg", "Accesorios");
-const producto10 = new Productos (10, "Botines X Speedportal", 50000, "./images/accesorios-botines2.jpg", "Accesorios");
-const producto11 = new Productos (11, "Botines Predator", 30000, "./images/accesorios-botines3.jpg", "Accesorios");
-const producto12 = new Productos (12, "Botines Predator 3", 30000, "./images/accesorios-botines4.jpg", "Accesorios");
-const producto13 = new Productos (13, "Campera Anthem", 35000, "./images/accesorios-campera.jpg", "Accesorios");
-const producto14 = new Productos (14, "Medias Suplentes 1", 5000, "./images/accesorios-medias-suplente.jpg", "Accesorios");
-const producto15 = new Productos (15, "Medias Suplentes 2", 5000, "./images/accesorios-medias-suplente2.jpg", "Accesorios");
-const producto16 = new Productos (16, "Medias Titulares", 7000, "./images/accesorios-medias-titular.jpg", "Accesorios");
-const producto17 = new Productos (17, "Pelota Al Rihla", 50000, "./images/accesorios-pelota.jpg", "Accesorios")
-const producto18 = new Productos (18, "Camiseta Campeon 2022", 20000, "./images/camiseta-argentina-campeon.jpg", "Camisetas");
-const producto19 = new Productos (19, "Pelota Argentina", 25000, "./images/accesorios-pelota2.jpg", "Accesorios");
-const producto20 = new Productos (20, "Camiseta Arquero Suplente", 12000, "./images/camiseta-arquero-suplente.jpg", "Camisetas");
-const producto21 = new Productos (21, "Camiseta Arquero Titular", 15000, "./images/camiseta-arquero-titular.jpg", "Camisetas");
-const producto22 = new Productos (22, "Chomba Cuerpo Técnico", 10000, "./images/camiseta-chomba-dt.jpg", "Camisetas");
-const producto23 = new Productos (23, "Camiseta Entrenamiento", 8000, "./images/camiseta-entrenamiento.jpg", "Camisetas");
-const producto24 = new Productos (24, "Camiseta de Viaje", 8000, "./images/camiseta-viaje.jpg", "Camisetas");
-const producto25 = new Productos (25, "Pantalon Entrenamiento", 12000, "./images/pantalon-entrenamiento.jpg", "Pantalones");
-const producto26 = new Productos (26, "Pantalon de Viaje", 10000, "./images/pantalon-viaje.jpg", "Pantalones");
-const producto27 = new Productos (27, "Camiseta Argentina 2021", 15000, "./images/camiseta-argentina-2021.jpg", "Camisetas");
+const producto1 = new Productos (1, "Camiseta Titular", 12000, "./images/camiseta-titular.jpg", "camisetas");
+const producto2 = new Productos (2, "Camiseta Suplente", 10000, "./images/camiseta-suplente.jpg", "camisetas");
+const producto3 = new Productos (3, "Short Titular Blanco", 8000, "./images/shot-titular.jpg", "pantalones");
+const producto4 = new Productos (4, "Short Titular Negro", 7000, "./images/short-titular2.png", "pantalones")
+const producto5 = new Productos (5, "Short Suplente", 7000, "./images/short-suplente.jpg", "pantalones");
+const producto6 = new Productos (6, "Camiseta Pre-Match (1)", 8500, "./images/camiseta-prepartido.jpg", "camisetas");
+const producto7 = new Productos (7, "Camiseta Pre-Match (2)", 8000, "./images/camiseta-prepartido2.jpg", "camisetas");
+const producto8 = new Productos (8, "Camiseta Pre-Match (3)", 8000, "./images/camiseta-prepartido3.jpg", "camisetas");
+const producto9 = new Productos (9, "Botines X Leyenda", 75000, "./images/accesorios-botines1.jpg", "accesorios");
+const producto10 = new Productos (10, "Botines X Speedportal", 50000, "./images/accesorios-botines2.jpg", "accesorios");
+const producto11 = new Productos (11, "Botines Predator", 30000, "./images/accesorios-botines3.jpg", "accesorios");
+const producto12 = new Productos (12, "Botines Predator 3", 30000, "./images/accesorios-botines4.jpg", "accesorios");
+const producto13 = new Productos (13, "Campera Anthem", 35000, "./images/accesorios-campera.jpg", "accesorios");
+const producto14 = new Productos (14, "Medias Suplentes 1", 5000, "./images/accesorios-medias-suplente.jpg", "accesorios");
+const producto15 = new Productos (15, "Medias Suplentes 2", 5000, "./images/accesorios-medias-suplente2.jpg", "accesorios");
+const producto16 = new Productos (16, "Medias Titulares", 7000, "./images/accesorios-medias-titular.jpg", "accesorios");
+const producto17 = new Productos (17, "Pelota Al Rihla", 50000, "./images/accesorios-pelota.jpg", "accesorios")
+const producto18 = new Productos (18, "Camiseta Campeon 2022", 20000, "./images/camiseta-argentina-campeon.jpg", "camisetas");
+const producto19 = new Productos (19, "Pelota Argentina", 25000, "./images/accesorios-pelota2.jpg", "accesorios");
+const producto20 = new Productos (20, "Camiseta Arquero Suplente", 12000, "./images/camiseta-arquero-suplente.jpg", "camisetas");
+const producto21 = new Productos (21, "Camiseta Arquero Titular", 15000, "./images/camiseta-arquero-titular.jpg", "camisetas");
+const producto22 = new Productos (22, "Chomba Cuerpo Técnico", 10000, "./images/camiseta-chomba-dt.jpg", "camisetas");
+const producto23 = new Productos (23, "Camiseta Entrenamiento", 8000, "./images/camiseta-entrenamiento.jpg", "camisetas");
+const producto24 = new Productos (24, "Camiseta de Viaje", 8000, "./images/camiseta-viaje.jpg", "camisetas");
+const producto25 = new Productos (25, "Pantalon Entrenamiento", 12000, "./images/pantalon-entrenamiento.jpg", "pantalones");
+const producto26 = new Productos (26, "Pantalon de Viaje", 10000, "./images/pantalon-viaje.jpg", "pantalones");
+const producto27 = new Productos (27, "Camiseta Argentina 2021", 15000, "./images/camiseta-argentina-2021.jpg", "camisetas");
 
 
 // ARRAY DE PRODUCTOS
@@ -102,18 +102,47 @@ botonCategorias.forEach(boton => {
 
 // FUNCION BUSCADOR DE PRODUCTOS
 
-const botonBusqueda = document.getElementById("buscador__icono");
-const buscador = document.getElementById("buscador__input");
-const resultadoBusqueda = document.getElementById("buscador__resultado")
-
-botonBusqueda.addEventListener("click", () => {
-    buscador.classList.toggle("ocultar");
-    buscador.addEventListener("keyup", (e) => {
-        let texto = e.target.value;
-        let busqueda = productos.filter(producto => producto.nombre === texto);
-        mostrarProductos(busqueda);
+const buscador = () => {
+    const botonBusqueda = document.getElementById("buscador__icono");
+    const inputTexto = document.getElementById("buscador__input");
+    inputTexto.addEventListener("change", () => {
+        let buscador = inputTexto.value;
+        console.log(buscador);
+        let productosFiltrados = productos.filter((producto) => {producto.categoria.includes(buscador.toLowerCase())});
+    coleccion.innerHTML = "";
+    productosFiltrados.forEach(producto => {
+        const card = document.createElement("div");
+        card.classList.add("col-xl-3, col-md-2, col-xs-12");
+        card.innerHTML = `<div>
+                            <img src="${producto.url}" class="card-img-top ImgProductos" alt="${producto.nombre}">
+                            <div class="card-body">
+                                <h5 class="text-center">${producto.nombre}</h5>
+                                <p class="text-center>$ ${producto.precio}</p>
+                                <button class="btn btn-primary ms-5 agregarProducto" id="producto.id">Agregar Al Carrito</button>
+                            </div>
+                        </div>`
+        coleccion.appendChild(card);
+        actualizarBotonesAgregar();
     })
-});
+    })
+    botonBusqueda.addEventListener("click", () => {
+        inputTexto.classList.toggle("ocultar");
+    });
+}
+buscador();
+
+// const botonBusqueda = document.getElementById("buscador__icono");
+// const buscador = document.getElementById("buscador__input");
+// const resultadoBusqueda = document.getElementById("buscador__resultado")
+
+// botonBusqueda.addEventListener("click", () => {
+//     buscador.classList.toggle("ocultar");
+//     buscador.addEventListener("keyup", (e) => {
+//         let texto = e.target.value;
+//         let busqueda = productos.filter(producto => producto.nombre === texto);
+//         mostrarProductos(busqueda);
+//     })
+// });
 
 
 // FUNCION PARA ACTUALIZAR BOTONES AGREGAR
