@@ -179,7 +179,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem; }
+  gap: 1rem;
+  border: 0; }
   .carrito-producto-cantidad p {
     display: flex;
     justify-content: center;
