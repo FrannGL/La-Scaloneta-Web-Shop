@@ -33,9 +33,13 @@ function cargarProductosCarrito() {
                                     <small>Titulo</small>
                                     <h3>${producto.nombre}</h3>
                                 </div>
-                                <div class="carrito-producto-cantidad">
+                                <div>
                                     <small>Cantidad</small>
-                                    <p>${producto.cantidad}</p>
+                                    <div class="carrito-producto-cantidad">
+                                        <p id="cantidad">${producto.cantidad}</p>
+                                        <button class="carrito-producto-operacion" id="sumarCantidad"><i class="fa-solid fa-plus"></i></button>
+                                        <button class="carrito-producto-operacion" id="restarCantidad"><i class="fa-solid fa-minus "></i></button>
+                                    </div>
                                 </div>
                                 <div class="carrito-producto-precio">
                                     <small>Precio</small>
@@ -45,7 +49,7 @@ function cargarProductosCarrito() {
                                     <small>Subtotal</small>
                                     <p>$ ${producto.precio * producto.cantidad}</p>
                                 </div>
-                                <button class="carrito-producto-eliminar" id="${producto.id}"><i class="fa-solid fa-trash"></i></button>`;
+                                <button class="carrito-producto-eliminar" onClick="eliminarDelCarrito(${producto.id})"><i class="fa-solid fa-trash"></i></button>`;
                 contenedorCarritoProductos.append(div);
             })
             
@@ -60,57 +64,51 @@ function cargarProductosCarrito() {
         }
     }
 
-    actualizarBotonesEliminar();
     actualizarTotal();
     actualizarNumerito();
 }
 
 cargarProductosCarrito();
 
-// FUNCION PARA ACTAULIZAR BOTONES DEL CARRITO
-
-function actualizarBotonesEliminar() {
-    botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
-    botonesEliminar.forEach(boton => {
-        boton.addEventListener("click", () => {
-            Swal.fire ({
-                title: "¿Estás seguro de eliminar?",
-                icon: "warning",
-                confirmButtonText: "Aceptar",
-                showCancelButton: true,
-                cancelButtonText: "Cancelar",
-            }).then((result) => {
-                if(result.isConfirmed) {
-                    eliminarDelCarrito();
-                }
-            })
-        })
-        // boton.addEventListener("click", eliminarDelCarrito)
-    });
-};
-
-
 // FUNCION PARA ELIMINAR PRODUCTOS DEL CARRITO
 
-function eliminarDelCarrito(e) {
-    botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar");
-    const idBoton = e.currentTarget.id;
-    const index = productosEnCarrito.findIndex(producto => producto.id === parseInt(idBoton));
-    console.log(index);
-    productosEnCarrito.splice(index, 1);
-    cargarProductosCarrito();
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+function eliminarDelCarrito(id) {
+    Swal.fire({
+        title: "¿Estás seguro de eliminar el producto?",
+        icon: "info",
+        width: 350,
+        confirmTextButton: "Aceptar",
+        showCancelButton: "Cancelar",
+        CancelButtonText: "Cancelar",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const producto = productosEnCarrito.find((producto) => producto.id === id);
+            productosEnCarrito.splice(productosEnCarrito.indexOf(producto), 1);
+            cargarProductosCarrito();
+            localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+        }
+    })
 }
-
 
 // FUNCION PARA VACIAR TODO EL CARRITO
 
 botonVaciar.addEventListener("click", vaciarCarrito);
 
 function vaciarCarrito() {
-    productosEnCarrito.length = 0;
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-    cargarProductosCarrito();
+    Swal.fire({
+        title: "¿Estás seguro de vaciar el Carrito?",
+        icon: "error",
+        width: 350,
+        confirmTextButton: "Aceptar",
+        showCancelButton: "Cancelar",
+        CancelButtonText: "Cancelar",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            productosEnCarrito.length = 0;
+            localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+            cargarProductosCarrito();
+        }
+    })
 }
 
 
@@ -144,3 +142,8 @@ function actualizarNumerito() {
     let nuevoNumero = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumero;
 }
+
+const sumarProductosCarrito = document.querySelectorAll(".carrito-producto-sumar");
+sumarProductosCarrito.addEventListener("click", () => {
+    
+})
