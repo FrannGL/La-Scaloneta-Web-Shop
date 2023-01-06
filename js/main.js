@@ -123,12 +123,18 @@ function actualizarBotonesAgregar() {
     agregarProducto.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito)
         boton.addEventListener("click", () => {
-            Swal.fire({
-                title: "¡Todo Listo!",
+            Toastify({
                 text: "Producto agregado al carrito",
-                icon: "success",
-                confirmButtonText: "Aceptar",
-            });
+                duration: 2000,
+                gravity: "bottom",
+                position: "right"
+            }).showToast();
+            // Swal.fire({
+            //     title: "¡Todo Listo!",
+            //     text: "Producto agregado al carrito",
+            //     icon: "success",
+            //     confirmButtonText: "Aceptar",
+            // });
         });
         
     })
