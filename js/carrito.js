@@ -148,12 +148,5 @@ function actualizarNumerito() {
 
 // FUNCION SUMAR-RESTAR CANTIDADES DEL CARRITO
 
-const cantidad = document.getElementById("cantidad");
-
-const sumarCantidades = () => {
-    const botonSuma = document.getElementById("sumarProducto");
-    botonSuma.addEventListener("click", () => {
-        
-    })
-}
-sumarCantidades();
+const botonSuma = document.getElementById("sumarProducto");
+const botonResta = document.getElementById("restarProducto");

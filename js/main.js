@@ -154,7 +154,7 @@ if (productosEnCarritoLS) {
     actualizarNumerito();
 } else {
     productosEnCarrito = [];
-    
+
 }
 
 function agregarAlCarrito(e) {
@@ -187,5 +187,3 @@ function actualizarNumerito() {
     let nuevoNumero = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumero;
 }
-
-
