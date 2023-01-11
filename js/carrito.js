@@ -80,6 +80,7 @@ function eliminarDelCarrito(id) {
         icon: "info",
         width: 350,
         confirmTextButton: "Aceptar",
+        confirmButtonColor: "#0088b6",
         showCancelButton: "Cancelar",
         CancelButtonText: "Cancelar",
     }).then((result) => {
@@ -102,6 +103,7 @@ function vaciarCarrito() {
         icon: "error",
         width: 350,
         confirmTextButton: "Aceptar",
+        confirmButtonColor: "#0088b6",
         showCancelButton: "Cancelar",
         CancelButtonText: "Cancelar",
     }).then((result) => {

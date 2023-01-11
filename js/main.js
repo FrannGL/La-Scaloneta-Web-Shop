@@ -66,7 +66,7 @@ const mostrarProductos = (todosLosProductos) => {
     coleccion.innerHTML = "";
     todosLosProductos.forEach( producto => {
         const card = document.createElement("div");
-        card.classList.add("col-xl-3", "col-md-2", "col-xs-12");
+        // card.classList.add("col-xl-3", "col-md-2", "col-xs-2");
         card.innerHTML = `<div class="card">
                             <img src="${producto.url}" class="card-img-top imgProductos" alt="${producto.nombre}">
                             <div class="card-body">

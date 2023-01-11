@@ -9,15 +9,16 @@
   padding: 8px;
   color: #0088b6; }
 
-.img-argentina {
-  width: 100%;
-  height: 100%; }
-
 .buscador {
   cursor: pointer; }
 
 .ocultar {
   display: none; }
+
+.contenedorProductos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 1rem; }
 
 .main__info {
   width: 100%;
@@ -44,12 +45,13 @@
 
 .card-body {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
   align-items: center; }
 
 .card {
-  width: 300px;
+  width: 290px;
   border-radius: 2rem;
   margin-top: 2rem;
   border: 1px solid #868686; }
@@ -59,6 +61,7 @@
   border-top-right-radius: 2rem; }
 
 .agregarProducto {
+  font-size: 0.9rem;
   margin-right: 2rem;
   border: 0;
   background-color: #fff;
@@ -249,19 +252,68 @@
 .disabled {
   visibility: hidden; }
 
-.win-dat {
+.footer-container-desk {
   display: flex;
-  justify-content: end;
-  width: 75%; }
+  justify-content: space-between;
+  margin-left: 100px; }
 
-.winner {
-  width: 70px;
-  margin-bottom: 20px;
-  margin-right: 1.5rem; }
+.redes-desk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px; }
 
-.data-fiscal {
-  width: 50px;
-  margin-bottom: 20px; }
+.datos-fiscales-desk {
+  width: 30%;
+  display: flex; }
+  .datos-fiscales-desk .winner-desk {
+    width: 70px;
+    margin-bottom: 20px;
+    margin-right: 1.5rem; }
+  .datos-fiscales-desk .data-fiscal-desk {
+    width: 50px;
+    margin-bottom: 20px; }
 
-.footer-section {
-  margin-top: 1000px; }
+.footer-nav {
+  display: none; }
+
+.footer-desk {
+  display: block; }
+
+@media screen and (min-width: 200px) and (max-width: 990px) {
+  .responsive-container {
+    margin-left: 3rem; }
+    .responsive-container .responsive-ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 80vw; }
+  .datos-fiscales {
+    display: none; }
+  .medios-de-pago {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .medios-de-pago img {
+      position: relative;
+      left: 5px; }
+  .redes {
+    margin: 0 auto; }
+    .redes section {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .container-img {
+    margin-top: 90px; }
+    .container-img .main__info {
+      height: 160px; }
+  .footer-desk {
+    display: none; }
+  .footer-nav {
+    display: block; } }
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .responsive-ul li {
+    padding: 0 1rem; } }

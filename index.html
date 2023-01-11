@@ -15,13 +15,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col g-0">
-                    <nav class="navbar navbar-expand-lg bg-light navbar-light nav-desk fixed-top">
-                        <a class="navbar-brand" href="index.html"><img src="images/LOGO.png" alt="logo" width="50px" class="img-fluid logo"></a>
+                    <nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+                        <a class="navbar-brand" href="index.html"><img src="images/LOGO.png" alt="logo" class="img-fluid logo"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0 gap-2">
+                        <div class="collapse navbar-collapse responsive-container" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0 gap-2 responsive-ul">
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">INICIO</a>
                                 </li>
@@ -60,13 +60,13 @@
     <main>
         <div class="container-fluid">
             <div class="row d-flex justify-content-center">
-                <div class="col g-0">
-                    <div class="mt-3">
-                        <img src="images/foto-1.jpg" alt="Argentina Campeon" class="img-argentina img-fluid">
+                <div class="col g-0 container-img">
+                    <div>
+                        <img src="images/foto-1.jpg" alt="Argentina Campeon" class="img-fluid mt-3">
                         <div class="main__info d-flex justify-content-center">
-                            <h2 class="col-4">ENVÍOS GRATIS A ZONA OESTE</h2>
-                            <h2 class="col-4">ENVÍOS GRATIS A CABA EN COMPRAS A PARTIR DE $3000</h2>
-                            <h2 class="col-4">5% DE DESCUENTO EN EFECTIVO CONTRA-ENTREGA</h2>
+                            <h2 class="col-4 promos fs-5">ENVÍOS GRATIS A ZONA OESTE</h2>
+                            <h2 class="col-4 promos fs-5">ENVÍOS GRATIS A CABA EN COMPRAS A PARTIR DE $3000</h2>
+                            <h2 class="col-4 promos fs-5">5% DE DESCUENTO EN EFECTIVO CONTRA-ENTREGA</h2>
                         </div>
                     </div>
                 </div>
@@ -85,19 +85,44 @@
             <div class="row">
                 <div class="col mt-5">
                     <h3 class="text__colection mb-3" id="titulo-principal">NUESTROS PRODUCTOS</h3>
-                    <div id="coleccion" class="row"></div>
+                    <div id="coleccion" class="row justify-content-center contenedorProductos mb-4"></div>
                 </div>
             </div>
         </div>
-        <div class="btn-wp fixed-bottom mb-4"><a href="https://wa.me/1121557802" target="_blank"><img src="images/whatsapp.png" alt="boton whatsapp"></a></div>
+        <div class="btn-wp fixed-bottom mb-5"><a href="https://wa.me/1121557802" target="_blank"><img src="images/whatsapp.png" alt="boton whatsapp"></a></div>
     </main>
-    <footer class="bg-dark text-white mt-5">
-        <div class="container p-4 pb-0">
+    <footer class="footer-desk">
+        <div class="container-fluid bg-dark text-white p-4">
             <div class="row">
-                <div class="col-4">
+                <div class="col footer-container-desk mb-4">
+                    <div class="medios-de-pago-desk ms-5">
+                        <img src="images/medios-de-pago.png" width="250px" alt="">
+                    </div>
+                    <div class="mt-4 redes-desk">
+                        <a class="btn btn-outline-light btn-floating" href="https://wa.me/1121557802" target="_blank" role="button"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-floating" href="https://www.instagram.com/fraaaangl/" target="_blank" role="button"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-floating" href="https://www.facebook.com/franco.galluccio/" target="_blank" role="button"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="btn btn-outline-light btn-floating" href="https://www.linkedin.com/in/franco-ivan-galluccio-553b1224a/" target="_blank" role="button"><i class="fa-brands fa-linkedin"></i></a>
+                        <a class="btn btn-outline-light btn-floating" href="https://github.com/FrannGL" target="_blank" role="button"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <div class="datos-fiscales-desk mt-3">
+                        <img class="winner-desk" src="images/winner-e-commerce.png" alt="">
+                        <img class="data-fiscal-desk" src="images/data-fiscal.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2022 Copyright:
+                <a class="text-white" href="index.html">La Scaloneta Web Shop</a>
+            </div>
+        </div>
+    </footer>
+    <footer class="bg-dark text-white mt-5 footer-nav">
+        <div class="container p-4 pb-0">
+            <div class="row wrapper">
+                <div class="col-1 medios-de-pago">
                     <img src="images/medios-de-pago.png" width="250px" alt="" class="mb-2">
                 </div>
-                <div class="col-4">
+                <div class="col-10 redes">
                     <section class="mt-3 mb-4 text-center">
                         <a class="btn btn-outline-light btn-floating m-1" href="https://wa.me/1121557802" target="_blank" role="button"><i class="fa-brands fa-whatsapp"></i></a>
                         <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/fraaaangl/" target="_blank" role="button"><i class="fa-brands fa-instagram"></i></a>
@@ -106,7 +131,7 @@
                         <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/FrannGL" target="_blank" role="button"><i class="fa-brands fa-github"></i></a>
                     </section>
                 </div>
-                <div class="col-4" >
+                <div class="col-1 datos-fiscales" >
                     <section class="win-dat">
                         <img class="winner" src="images/winner-e-commerce.png" alt="">
                         <img class="data-fiscal" src="images/data-fiscal.jpg" alt="">
@@ -117,7 +142,7 @@
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2022 Copyright:
             <a class="text-white" href="#">La Scaloneta Web Shop</a>
         </div>
-        </footer>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5298016dfa.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
