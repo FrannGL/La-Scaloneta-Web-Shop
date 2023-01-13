@@ -38,8 +38,8 @@ function cargarProductosCarrito() {
                                     <div class="carrito-producto-cantidad">
                                         <p id="cantidad">${producto.cantidad}</p>
                                         <div class="carrito-producto-operacion">
-                                            <button id="sumarProducto"><i class="fa-solid fa-plus"></i></button>
-                                            <button id="restarProducto"><i class="fa-solid fa-minus "></i></button>
+                                            <button id="sumarProducto-${producto.id}"><i class="fa-solid fa-plus"></i></button>
+                                            <button id="restarProducto-${producto.id}"><i class="fa-solid fa-minus "></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -53,6 +53,11 @@ function cargarProductosCarrito() {
                                 </div>
                                 <button class="carrito-producto-eliminar" onClick="eliminarDelCarrito(${producto.id})"><i class="fa-solid fa-trash"></i></button>`;
                 contenedorCarritoProductos.append(div);
+                const botonSuma = document.getElementById(`sumarProducto-${producto.id}`);
+                const botonResta = document.getElementById(`restarProducto-${producto.id}`);
+                botonSuma.addEventListener("click", () => {
+                    aumentarCantidad(producto.id,cantidad)
+                });
             })
             
         
@@ -149,24 +154,22 @@ function actualizarNumerito() {
 
 // FUNCION SUMAR-RESTAR CANTIDADES DEL CARRITO
 
-const botonSuma = document.getElementById("sumarProducto");
-const botonResta = document.getElementById("restarProducto");
 let productoCantidad = document.getElementById("cantidad");
 let productoPrecio = document.getElementById("precio");
-let productoTotal = document.getElementById("subtotal");
-let contador = 1;
 
-const aumentarCantidad = () => {
-    let precio = document.getElementById("precio").innerHTML;
+const aumentarCantidad = (id, productoCantidad) => {
+    const productoEnCarrito = productosEnCarrito.find((producto) => producto.id === id);
     let total = document.getElementById("subtotal").innerHTML;
-    contador++;
-    total = precio * contador;
-    productoCantidad.innerHTML = contador;
+    let productoTotal = document.getElementById("subtotal");
+    productoEnCarrito.cantidad++;
+    productoCantidad.innerHTML = productoEnCarrito.cantidad;
     productoTotal.innerHTML = total;
+    actualizarTotal();
+    console.log(productosEnCarrito);
 };
 
 
-const disminuirCantidad = (id) => {
+const disminuirCantidad = () => {
 
     let precio = document.getElementById("precio").innerHTML;
     let total = document.getElementById("subtotal").innerHTML;
@@ -183,9 +186,5 @@ const disminuirCantidad = (id) => {
         productoTotal.innerHTML = total;
     }
 }
-
-botonSuma.addEventListener("click", aumentarCantidad);
-botonResta.addEventListener("click", disminuirCantidad);
-
 
 
