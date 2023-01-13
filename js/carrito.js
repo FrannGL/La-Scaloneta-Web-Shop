@@ -58,6 +58,9 @@ function cargarProductosCarrito() {
                 botonSuma.addEventListener("click", () => {
                     aumentarCantidad(producto.id,cantidad)
                 });
+                botonResta.addEventListener("click", () => {
+                    disminuirCantidad(producto.id,cantidad)
+                })
             })
             
         
@@ -172,22 +175,22 @@ const aumentarCantidad = (id, productoCantidad) => {
 };
 
 
-const disminuirCantidad = (e) => {
-
+const disminuirCantidad = (id, productoCantidad) => {
+    const productoEnCarrito = productosEnCarrito.find((producto) => producto.id === id);
     let precio = document.getElementById("precio").innerHTML;
     let total = document.getElementById("subtotal").innerHTML;
-
-    if (productoCantidad <= 1) {
-        const producto = productosEnCarrito.find((producto) => producto.id === id);
+    let productoTotal = document.getElementById("subtotal");
+    productoEnCarrito.cantidad--;
+    productoCantidad.innerHTML = productoEnCarrito.cantidad;
+    total = precio * productoEnCarrito.cantidad;
+    productoTotal.innerHTML = total;
+    if (productoEnCarrito.cantidad < 1) {
+        const producto = productosEnCarrito.some(producto => producto.id === id)
         productosEnCarrito.splice(productosEnCarrito.indexOf(producto), 1);
         cargarProductosCarrito();
-        localStorage.setItem("productos-en-carrito", JSON.stringi(productosEnCarrito));
-    } else {
-        contador--;
-        total = precio * contador;
-        productoCantidad.innerHTML = contador;
-        productoTotal.innerHTML = total;
     }
+    actualizarTotal();
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
 
 
