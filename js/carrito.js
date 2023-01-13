@@ -159,17 +159,20 @@ let productoPrecio = document.getElementById("precio");
 
 const aumentarCantidad = (id, productoCantidad) => {
     const productoEnCarrito = productosEnCarrito.find((producto) => producto.id === id);
+    let precio = document.getElementById("precio").innerHTML;
     let total = document.getElementById("subtotal").innerHTML;
     let productoTotal = document.getElementById("subtotal");
     productoEnCarrito.cantidad++;
     productoCantidad.innerHTML = productoEnCarrito.cantidad;
+    total = precio * productoEnCarrito.cantidad;
     productoTotal.innerHTML = total;
     actualizarTotal();
     console.log(productosEnCarrito);
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 };
 
 
-const disminuirCantidad = () => {
+const disminuirCantidad = (e) => {
 
     let precio = document.getElementById("precio").innerHTML;
     let total = document.getElementById("subtotal").innerHTML;
