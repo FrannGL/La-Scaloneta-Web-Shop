@@ -81,24 +81,23 @@ const mostrarProductos = (todosLosProductos) => {
 
 fetch(productos)
     .then(respuesta => respuesta.json())
-    .then(datos => mostrarProductos(datos))
-    
-    .catch(error => console.log(error))
-    .finally(() => console.log("Proceso Finalizado"));
+    .then(datos => {
 
+// RENDERIZAMOS EL DOM CON LOS PRODUCTOS
+        mostrarProductos(datos)
 
 // FUNCION PARA FILTRAR POR CATEGORIA
 
 botonCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
         if(e.currentTarget.id != "todos") {
-            const productoCategoria = productos.find(producto => producto.categoria === e.currentTarget.id);
+            const productoCategoria = datos.find(producto => producto.categoria === e.currentTarget.id);
             tituloPrincipal.innerText = productoCategoria.categoria.toUpperCase();
-            const productosSeleccionados = productos.filter(producto => producto.categoria === e.currentTarget.id);
+            const productosSeleccionados = datos.filter(producto => producto.categoria === e.currentTarget.id);
         mostrarProductos(productosSeleccionados);
         } else {
             tituloPrincipal.innerText = "NUESTROS PRODUCTOS";
-            mostrarProductos(productos);
+            mostrarProductos(datos);
         }
         
     })
@@ -112,7 +111,7 @@ const buscador = () => {
     inputTexto.addEventListener('change', () => {
         let buscador = inputTexto.value;
         console.log(buscador);
-        let prodFiltrados = productos.filter((prod) =>
+        let prodFiltrados = datos.filter((prod) =>
             prod.nombre.includes(buscador.toUpperCase()));
         //   console.log(prodFiltrados)
         coleccion.innerHTML = "";
@@ -136,6 +135,24 @@ const buscador = () => {
     });
 }
 buscador();
+
+    })
+    
+    .catch(error => console.log(error))
+    .finally(() => console.log("Proceso Finalizado"));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // FUNCION PARA ACTUALIZAR BOTONES AGREGAR
 
