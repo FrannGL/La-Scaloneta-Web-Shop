@@ -62,30 +62,9 @@ const productos = '../json/productos.json';
 
 // FUNCION MOSTRAR PRODUCTOS
 
-// const mostrarProductos = (todosLosProductos) => {
-//     coleccion.innerHTML = "";
-//     todosLosProductos.forEach( producto => {
-//         const card = document.createElement("div");
-//         // card.classList.add("col-xl-3", "col-md-2", "col-xs-2");
-//         card.innerHTML = `<div class="card">
-//                             <img src="${producto.url}" class="card-img-top imgProductos" alt="${producto.nombre}">
-//                             <div class="card-body">
-//                                 <h5 class="text-center">${producto.nombre}</h5>
-//                                 <p class="text-center">$ ${producto.precio}</p>
-//                                 <button class="btn btn-primary ms-5 agregarProducto" id="${producto.id}">Agregar al Carrito</button>
-//                             </div>
-//                         </div>`
-//         coleccion.appendChild(card);
-//         actualizarBotonesAgregar();
-//     })
-// }
-
-// mostrarProductos(productos);
-
-fetch(productos)
-    .then(respuesta => respuesta.json())
-    .then(datos => {
-        datos.forEach( producto => {
+const mostrarProductos = (todosLosProductos) => {
+    coleccion.innerHTML = "";
+    todosLosProductos.forEach( producto => {
         const card = document.createElement("div");
         card.innerHTML = `<div class="card">
                             <img src="${producto.url}" class="card-img-top imgProductos" alt="${producto.nombre}">
@@ -98,7 +77,11 @@ fetch(productos)
         coleccion.appendChild(card);
         actualizarBotonesAgregar();
     })
-    })
+};
+
+fetch(productos)
+    .then(respuesta => respuesta.json())
+    .then(datos => mostrarProductos(datos))
     
     .catch(error => console.log(error))
     .finally(() => console.log("Proceso Finalizado"));

@@ -275,7 +275,7 @@
     width: 50px;
     margin-bottom: 20px; }
 
-.footer-nav {
+.footer-resp {
   display: none; }
 
 .footer-desk {
@@ -290,6 +290,10 @@
       flex-wrap: wrap;
       justify-content: center;
       width: 80vw; }
+  .footer-desk {
+    display: none; }
+  .footer-resp {
+    display: block; }
   .datos-fiscales {
     display: none; }
   .medios-de-pago {
@@ -308,11 +312,7 @@
   .container-img {
     margin-top: 90px; }
     .container-img .main__info {
-      height: 160px; }
-  .footer-desk {
-    display: none; }
-  .footer-nav {
-    display: block; } }
+      height: 160px; } }
 
 @media screen and (min-width: 767px) and (max-width: 991px) {
   .responsive-ul li {
