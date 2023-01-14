@@ -57,7 +57,7 @@ const vaciarCarrito = document.getElementById("vaciarCarrito");
 const total = document.getElementById("total");
 let agregarProducto = document.querySelectorAll(".agregarProducto");
 const numerito = document.getElementById("numerito");
-const productosURL = '../json/productos.json';
+const productosURL = './json/productos.json';
 
 
 // FUNCION MOSTRAR PRODUCTOS
