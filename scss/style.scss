@@ -366,6 +366,29 @@
                     width: 80vw;
                 }
     }
+    .carrito-producto {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 85vw;
+        h3 {
+            font-size: 1.2rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        img {
+            width: 4rem;
+        }
+    }
+    .carrito-acciones-izquierda {
+        position: relative;
+        right: 80px;
+    }
+    .carrito-acciones-derecha {
+        position: relative;
+        right: 50px;
+    }
     .footer-desk {
         display: none;
     }
