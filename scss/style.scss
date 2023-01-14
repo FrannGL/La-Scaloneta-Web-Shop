@@ -366,6 +366,16 @@
                     width: 80vw;
                 }
     }
+    .redes-nav {
+        display: flex;
+        justify-content: center;
+        li {
+            i {
+            text-align: center;
+            padding: 0.8rem;
+            }
+        }
+    }
     .carrito-producto {
         display: flex;
         flex-wrap: wrap;
@@ -387,7 +397,14 @@
     }
     .carrito-acciones-derecha {
         position: relative;
-        right: 50px;
+        right: 70px;
+        p {
+            font-size: 1.5rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
     }
     .footer-desk {
         display: none;

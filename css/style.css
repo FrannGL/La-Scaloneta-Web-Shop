@@ -290,6 +290,12 @@
       flex-wrap: wrap;
       justify-content: center;
       width: 80vw; }
+  .redes-nav {
+    display: flex;
+    justify-content: center; }
+    .redes-nav li i {
+      text-align: center;
+      padding: 0.8rem; }
   .carrito-producto {
     display: flex;
     flex-wrap: wrap;
@@ -306,7 +312,12 @@
     right: 80px; }
   .carrito-acciones-derecha {
     position: relative;
-    right: 50px; }
+    right: 70px; }
+    .carrito-acciones-derecha p {
+      font-size: 1.5rem; }
+    .carrito-acciones-derecha h3 {
+      font-size: 1.5rem;
+      text-align: center; }
   .footer-desk {
     display: none; }
   .footer-resp {
